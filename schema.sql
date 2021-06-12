@@ -21,17 +21,16 @@ CREATE TABLE "billionaires" (
 );
 
 CREATE TABLE "world_bank" (
-    "world_bank_id" SERIAL   NOT NULL,
+    "country_name" VARCHAR   NOT NULL,
     "country_code" VARCHAR   NOT NULL,
     "region_code" VARCHAR   NOT NULL,
-    "country_name" VARCHAR   NOT NULL,
     "gdp" INT   NOT NULL,
     "population" INT   NOT NULL,
     "population_cgr" INT   NOT NULL,
     "internet_users" INT   NOT NULL,
     "life_expectancy" INT   NOT NULL,
     CONSTRAINT "pk_world_bank" PRIMARY KEY (
-        "world_bank_id"
+        "country_name"
      )
 );
 
