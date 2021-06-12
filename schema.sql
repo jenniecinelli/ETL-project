@@ -3,16 +3,17 @@
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
 
 CREATE TABLE "world_bank" (
-    "country_name" VARCHAR   NOT NULL,
-    "country_code" VARCHAR   NOT NULL,
-    "region_code" VARCHAR   NOT NULL,
-    "gdp" INT   NOT NULL,
-    "population" INT   NOT NULL,
-    "population_cgr" FLOAT   NOT NULL,
-    "internet_users" INT   NOT NULL,
-    "life_expectancy" INT   NOT NULL,
+	"world_bank_id" SERIAL,
+    "country_name" VARCHAR,
+    "country_code" VARCHAR,
+    "region_code" VARCHAR,
+    "gdp" INT,
+    "population" BIGINT,
+    "population_cgr" FLOAT,
+    "internet_users" INT,
+    "life_expectancy" INT,
     CONSTRAINT "pk_world_bank" PRIMARY KEY (
-        "country_name"
+        "world_bank_id"
      )
 );
 
