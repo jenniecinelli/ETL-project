@@ -18,3 +18,15 @@ FROM world_bank as w
 WHERE gdp IS NOT NULL
 ORDER BY population
 
+-- Top Ten Schools
+SELECT "School1", count("School1") as "School_Count"
+FROM billionaires
+WHERE "School1" IS NOT NULL
+GROUP BY "School1"
+ORDER BY "School_Count" DESC;
+
+-- Drop out rate by country, university
+SELECT country_name, dropout, count(dropout) as "dropout_rate"
+FROM billionaires
+GROUP BY country_name, dropout
+ORDER BY "dropout_rate" DESC;
