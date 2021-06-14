@@ -3,6 +3,7 @@
 2. Jenna Murphy
 3. John Russell
 4. Jennie Cinelli
+5. Elie T.Kingsley
 
 Goal: Prepare a database for the analysis of a correlation between Billionaires and World Bank Data.
 
