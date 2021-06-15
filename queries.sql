@@ -23,17 +23,19 @@ SELECT "School1", count("School1") as "School_Count"
 FROM billionaires
 WHERE "School1" IS NOT NULL
 GROUP BY "School1"
-ORDER BY "School_Count" DESC;
+ORDER BY "School_Count" DESC
+LIMIT 10
 
 -- Drop out rate by country 
 SELECT country_name, dropout, count(dropout) as "dropout_rate"
 FROM billionaires
+WHERE dropout = 'true'
 GROUP BY country_name, dropout
 ORDER BY "dropout_rate" DESC;
 
 -- Drop out rate by university
 SELECT "School1", dropout, count(dropout) as "dropout_rate"
 FROM billionaires
-WHERE "School1" IS NOT NULL
+WHERE "School1" IS NOT NULL AND dropout = 'true'
 GROUP BY "School1", dropout
 ORDER BY "dropout_rate" DESC;

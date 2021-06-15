@@ -34,7 +34,3 @@ CREATE TABLE "billionaires" (
         "billionaire_id"
      )
 );
-
-
-ALTER TABLE "billionaires" ADD CONSTRAINT "fk_billionaires_country_name" FOREIGN KEY("country_name")
-REFERENCES "world_bank" ("country_name");
